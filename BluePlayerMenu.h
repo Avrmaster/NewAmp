@@ -1,0 +1,15 @@
+void BluePlayerMenu (void) {
+lcd_clear();
+lcd_puts("Bluetooth Player");
+lcd_gotoxy(0,1);
+
+
+switch (PlayerMenu) {
+case 0: lcd_puts("*<*           > "); lcd_gotoxy(7,1); if (doesPlaying==1) lcd_putchar(4); else lcd_putchar(5); break;
+case 1: lcd_puts(" <    * *     > "); lcd_gotoxy(7,1); if (doesPlaying==1) lcd_putchar(4); else lcd_putchar(5); break;
+case 2: lcd_puts(" <           *>*"); lcd_gotoxy(7,1); if (doesPlaying==1) lcd_putchar(4); else lcd_putchar(5); break;
+}
+
+ 
+
+}

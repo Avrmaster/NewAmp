@@ -1,0 +1,121 @@
+void button_1 (void) {int k;
+#asm ("cli");
+  
+
+i2c_start();
+i2c_write(0b10001000);
+i2c_write(63);
+i2c_write(0b10011111);
+i2c_write(0b10111111);
+i2c_write(0b11011111);
+i2c_write(0b11111111);
+i2c_stop();
+
+
+PORTA&=~1;
+delay_ms(10);
+lcd_clear();
+lcd_puts("  Leskiv");
+lcd_gotoxy(0,1);
+lcd_puts("    Production");
+delay_ms(1500);
+
+
+settings[0]=volume;
+settings[1]=bass;
+settings[2]=treble;
+settings[3]=gain;
+settings[4]=loudness;
+settings[5]=LR_balance;
+settings[6]=FR_balance;
+settings[7]=input;
+settings[8]=brightless;
+settings[9]=opasity;
+settings[10]=doesPlaying;
+settings[11]=isBluetoothEnabled;
+doesEEpromWritten=1;
+
+
+for (k=opasity; k<500; k++) {
+OCR1A=k;
+delay_ms(1);
+}
+
+for (k=brightless; k>=0; k--) {
+OCR0=k;
+delay_ms(1);
+}
+
+TCCR0=0x00;
+PORTB.4=0;
+
+lcd_clear();
+
+delay_ms(50);
+
+WDTCR=0x18;
+WDTCR=0x08;
+
+#asm ("cli");
+while (1) {}
+
+
+
+}
+
+
+void button_2 (void) {
+if (recentMenu==1) {
+recentMenu=bassMenu;} else {
+recentMenu=trebleMenu;}
+UpdateMenu();
+}
+
+
+void button_3 (void) {
+    if (recentMenu==3) {
+    recentMenu=preampMenu;} else    
+    recentMenu=inputsMenu;
+UpdateMenu();
+}
+
+
+void button_4 (void) {
+recentMenu=5;
+UpdateMenu();
+}
+
+
+void button_5 (void) { 
+if (recentMenu==6) {recentMenu=FRBalanceMenu}
+else {recentMenu=LRBalanceMenu}
+UpdateMenu();
+}
+
+
+void button_6 (void) {
+
+}
+
+
+void button_7 (void) {
+
+}
+
+
+void button_8 (void) {
+recentMenu=11;
+UpdateMenu();
+}
+
+
+void button_9 (void) {
+switch (recentMenu) {
+case 8: recentMenu=9;  break;
+case 9: recentMenu=10; break;
+case 10: recentMenu=8; break;
+default: recentMenu=8; break;
+}
+UpdateMenu();
+}
+

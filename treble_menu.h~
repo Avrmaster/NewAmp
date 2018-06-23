@@ -1,0 +1,51 @@
+void treble_menu (void) {
+	unsigned char temp2;
+	lcd_clear();
+	switch (treble) {
+		case 0:  showtreble=-14; temp2=0b01110000;
+		break;
+		case 1:  showtreble=-12; temp2=0b01110001;
+		break;
+		case 2:  showtreble=-10; temp2=0b01110010;
+		break;
+		case 3:  showtreble=-8;  temp2=0b01110011;
+		break;
+		case 4:  showtreble=-6;  temp2=0b01110100;
+		break;
+		case 5:  showtreble=-4;  temp2=0b01110101;
+		break;
+		case 6:  showtreble=-2;  temp2=0b01110110;
+		break;
+		case 7:  showtreble=0;   temp2=0b01110111;
+		break;
+		case 8:  showtreble=2;   temp2=0b01111110;
+		break;
+		case 9:  showtreble=4;   temp2=0b01111101;
+		break;
+		case 10: showtreble=6;   temp2=0b01111100;
+		break;
+		case 11: showtreble=8;   temp2=0b01111011;
+		break;
+		case 12: showtreble=10;  temp2=0b01111010;
+		break;
+		case 13: showtreble=12;  temp2=0b01111001;
+		break;
+		case 14: showtreble=14;  temp2=0b01111000;
+		break;
+		
+	}
+	
+	if (showtreble<=0) {
+	sprintf(buffer, "Treble: %d ", showtreble);
+	}
+	if (showtreble>0)  {
+	sprintf(buffer, "Treble: +%d ", showtreble);
+    }
+    lcd_puts(buffer);
+	ShowScaleBalance(temp2, showtreble);
+	i2c_start();
+	i2c_write(0b10001000);
+	i2c_write(temp2);
+	i2c_stop();
+
+}

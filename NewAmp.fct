@@ -1,0 +1,13 @@
+main DSTACK_USAGE:0 DSTACK_LEVEL:0 FILE:"NewAmp.c" LINE:458
+UpdateMenu DSTACK_USAGE:0 DSTACK_LEVEL:0 FILE:"NewAmp.c" LINE:94
+RL_balance_menu DSTACK_USAGE:7 DSTACK_LEVEL:7 FILE:"RL_balance_menu.h" LINE:1
+sprintf DSTACK_USAGE:14 DSTACK_LEVEL:21 FILE:"C:\Program Files (x86)\CodeVisionAvr\lib\stdio.lib" LINE:1410
+_print DSTACK_USAGE:20 DSTACK_LEVEL:41 FILE:"C:\Program Files (x86)\CodeVisionAvr\lib\stdio.lib" LINE:503
+strlen DSTACK_USAGE:2 DSTACK_LEVEL:43 FILE:"C:\Program Files (x86)\CodeVisionAvr\lib\string.lib" LINE:1706
+tim3_compa DSTACK_USAGE:14 DSTACK_LEVEL:57 FILE:"NewAmp.c" LINE:398
+ValueChanged DSTACK_USAGE:1 DSTACK_LEVEL:58 FILE:"NewAmp.c" LINE:212
+UpdateMenu DSTACK_USAGE:0 DSTACK_LEVEL:58 FILE:"NewAmp.c" LINE:94
+RL_balance_menu DSTACK_USAGE:7 DSTACK_LEVEL:65 FILE:"RL_balance_menu.h" LINE:1
+sprintf DSTACK_USAGE:14 DSTACK_LEVEL:79 FILE:"C:\Program Files (x86)\CodeVisionAvr\lib\stdio.lib" LINE:1410
+_print DSTACK_USAGE:20 DSTACK_LEVEL:99 FILE:"C:\Program Files (x86)\CodeVisionAvr\lib\stdio.lib" LINE:503
+strlen DSTACK_USAGE:2 DSTACK_LEVEL:101 FILE:"C:\Program Files (x86)\CodeVisionAvr\lib\string.lib" LINE:1706

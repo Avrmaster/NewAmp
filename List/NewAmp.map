@@ -1,0 +1,50 @@
+RAM Allocation
+Variable                                                          Address   Size
+--------------------------------------------------------------------------------
+bluetoothResetTimer                                               0x0B72       2
+bluetoothAskStateTimer                                            0x0B74       2
+BlueBuffer                                                        0x0B76      10
+doesConected                                                      0x0B80       1
+lastConectedState                                                 0x0B81       1
+lastPlayingState                                                  0x0B82       1
+volume                                                            0x0B83       1
+treble                                                            0x0B84       1
+bass                                                              0x0B85       1
+input                                                             0x0B86       1
+gain                                                              0x0B87       1
+loudness                                                          0x0B88       1
+brightless                                                        0x0B89       1
+isBluetoothEnabled                                                0x0B8A       1
+PlayerMenu                                                        0x0B8B       1
+LR_balance                                                        0x0B8C       1
+FR_balance                                                        0x0B8D       1
+opasity                                                           0x0B8E       2
+mayOFF                                                            0x0B90       1
+isOFF                                                             0x0B91       1
+encwas                                                            0x0B92       2
+buffer                                                            0x0B94      32
+k                                                                 0x0BB4       1
+sleepBrightless                                                   0x0BB5       1
+wasPlayingBeforeSwitch                                            0x0BB6       1
+doesReceiving                                                     0x0BB7       2
+recentBitLenght                                                   0x0BB9       2
+_base_y                                                           0x0BBB       4
+_lcd_x                                                            0x0BBF       1
+_lcd_y                                                            0x0BC0       1
+_lcd_maxx                                                         0x0BC1       1
+
+EEPROM Allocation
+Variable                                                          Address   Size
+--------------------------------------------------------------------------------
+doesEEpromWritten                                                 0x0000       1
+settings                                                          0x0001      24
+
+Register Allocation
+Variable                                                          Register  Size
+--------------------------------------------------------------------------------
+recentMenu                                                        R5           1
+sleepTime                                                         R6,R7        2
+bluetoothResetTime                                                R8,R9        2
+timer                                                             R10,R11      2
+sleepTimer                                                        R12,R13      2
+doesPlaying                                                       R4           1
